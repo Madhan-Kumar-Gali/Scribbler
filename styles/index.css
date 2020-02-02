@@ -1,0 +1,23 @@
+body {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sub-heading {
+    font-family: Ubuntu Mono;
+    margin-top: 0;
+}
+#pageTitle {
+    font-family: 'Montez', cursive; 
+    color: blue;
+    margin: 10px 10px 0px 0px; 
+}
+input.topButtons {
+    color: white;
+    background-color: blue;
+    width: 90px;
+    float: right;
+    margin: 10px 10px 0px 0px;
+    cursor: pointer;
+    padding: 10px;
+}
