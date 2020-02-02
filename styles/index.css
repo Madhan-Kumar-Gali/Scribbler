@@ -24,3 +24,11 @@ input.topButtons {
 .form-group > input {
     background-color: rgb(241, 241, 241);
 }
+.form-group > p {
+    text-align: center;
+}
+.form-group > p > a {
+    text-decoration: none;
+    color: blue;
+    margin-left: 5px;
+}
