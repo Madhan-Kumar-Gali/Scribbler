@@ -5,12 +5,12 @@ body {
 }
 .sub-heading {
     font-family: Ubuntu Mono;
-    margin-top: 0;
+    margin: 0px 0px 0px 10px;
 }
 #pageTitle {
     font-family: 'Montez', cursive; 
     color: blue;
-    margin: 10px 10px 0px 0px; 
+    margin: 10px 10px 0px 10px; 
 }
 input.topButtons {
     color: white;
@@ -20,4 +20,7 @@ input.topButtons {
     margin: 10px 10px 0px 0px;
     cursor: pointer;
     padding: 10px;
+}
+.form-group > input {
+    background-color: rgb(241, 241, 241);
 }
