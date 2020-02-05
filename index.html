@@ -22,16 +22,15 @@
 
 <body>
     <div class="header">
-        <input class="topButtons" type="button" value="Sign In" data-toggle="modal" data-target="#signin-modal"/>
+        <input class="topButtons" type="button" value="Sign In" data-toggle="modal" data-target="#signin-modal" />
         <input class="topButtons" type="button" value="Sign Up" data-toggle="modal" data-target="#signup-modal" />
         <h1 id="pageTitle" class="logo-title">ScriBBler</h1>
         <h5 class="sub-heading">Explore, Imagine, Create</h5>
     </div>
-    <div class="col-sm-4">
         <div class="modal" id="signup-modal">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="col-sm-1"></div>
-                <div class="modal-content col-sm-10">
+                <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Join Us</h5>
                         <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
@@ -40,21 +39,22 @@
                         <form>
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" class="form-control" placeholder="Enter your name" id="name" />
+                                <input type="text" class="form-control" placeholder="Enter your name" id="name" required/>
                             </div>
                             <div class="form-group">
                                 <label for="username">Username</label>
                                 <input type="text" class="form-control" placeholder="Enter your username"
-                                    id="username" />
+                                    id="username" required/>
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" placeholder="Enter your password" id="password" />
+                                <input type="password" class="form-control" placeholder="Enter your password"
+                                    id="password" required/>
                             </div>
                             <div class="form-group">
                                 <label for="confirm-password">Confirm Password</label>
                                 <input type="password" class="form-control" placeholder="Re-enter your password"
-                                    id="confirm-password" />
+                                    id="confirm-password" required/>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-success form-control">Sign Up</button>
@@ -62,43 +62,72 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-sm-1"></div>
             </div>
         </div>
     </div>
-    <div class="col-sm-4">
-        <div class="modal" id="signin-modal">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="col-sm-1"></div>
-                <div class="modal-content col-sm-10">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Welcome Back!</h5>
-                        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" placeholder="Enter your username"
-                                    id="username" />
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" placeholder="Enter your password" id="password" />
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-success form-control">Sign In</button>
-                            </div>
-                            <div class="form-group">
-                                <p>Not a member?<a href="#signup-modal" data-dismiss="modal" data-toggle="modal">Sign Up</a></p>
-                            </div>
-                        </form>
-                    </div>
+
+    <div class="modal" id="signin-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="col-sm-1"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Welcome Back!</h5>
+                    <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
                 </div>
-                <div class="col-sm-1"></div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" placeholder="Enter your username" id="username" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" placeholder="Enter your password"
+                                id="password" required/>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success form-control">Sign In</button>
+                        </div>
+                        <div class="form-group">
+                            <p>Not a member?<a href="#signup-modal" data-dismiss="modal" data-toggle="modal">Sign
+                                    Up</a></p>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+    <div class="middleButtons">
+        <button onclick="allPosts()">All Posts</button>
+        <button data-toggle="modal" data-target="#createPost-modal">Create Post</button>
+    </div>
+    <div class="modal" id="createPost-modal">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pen Your Post</h5>
+                    <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" placeholder="Enter title of your post" id="title" />
+                        </div>
+                        <div class="form-group">
+                            <label for="contents">Contents</label>
+                            <textarea type="text" class="form-control" placeholder="Enter the contents of your post"
+                                id="contents" rows="10"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-success">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>

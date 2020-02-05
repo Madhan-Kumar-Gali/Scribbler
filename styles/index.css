@@ -23,6 +23,11 @@ input.topButtons {
 }
 .form-group > input {
     background-color: rgb(241, 241, 241);
+    border-radius: 0px;
+}
+.form-group > textarea {
+    background-color: rgb(241, 241, 241);
+    border-radius: 0px;
 }
 .form-group > p {
     text-align: center;
@@ -31,4 +36,29 @@ input.topButtons {
     text-decoration: none;
     color: blue;
     margin-left: 5px;
+}
+.form-group > button {
+    border-radius: 0px;
+    margin-top: 10px;
+}
+.middleButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.middleButtons > button {
+    padding: 5px;
+    text-align: center;
+    width: 100px;
+    margin: 5px;
+    background-color: orange;
+}
+#signin-modal > div > div.modal-content {
+    border-radius: 0px;
+}
+#signup-modal > div > div.modal-content {
+    border-radius: 0px;
+}
+#createPost-modal > div > div.modal-content {
+    border-radius: 0px;
 }
